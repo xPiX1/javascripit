@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tema</title>
+    </head>
+    <body>
+        <button class="js-add-button">Add</button>
+        <button class="js-remove-button">Remove</button>
+        <script>
+            let messages = 2;
+            
+            let intervalId;
+
+            let isDisplayinNotification;
+            
+            displayNotification();
+
+            function displayNotification(){
+                if(isDisplayinNotification){
+                    return;
+                }
+                isDisplayinNotification = true;
+
+                intervalId = setInterval( () =>{
+                    if(document.title === 'Tema')
+                    {
+                        document.title = `(${messages}) New messages`;
+                    }
+                    else {
+                        document.title = 'Tema';
+                    }
+                }, 2000);  
+            }
+
+            function stopNotification(){
+                isDisplayinNotification  = false;
+
+                clearInterval(intervalId);
+                document.title = 'Tema';
+            }
+            const addButton = document.querySelector('.js-add-button');
+            addButton.addEventListener('click',() => {
+                messages++;
+                displayNotification();
+            });
+            const removeButton = document.querySelector('.js-remove-button');
+            removeButton.addEventListener('click', () => {
+                if(messages > 0){
+                messages--;
+            if(messages === 0)
+                stopNotification();
+            }
+            });
+        </script>
+    </body>
+</html>

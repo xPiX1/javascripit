@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tema 11</title>
+    </head>
+    <body>
+        <script>
+
+            /*
+            let b = [];
+            let c = [1, 1, 3];
+            function addArrays(Array, Array2){
+            for(i = 0; i < Array.length; i++){
+                b.push(Array[i]+Array2[i]);    
+            }
+            console.log(b);
+            }
+            addArrays(a,c);
+            
+            let c = 0;
+            function countPositive(Array){
+                for(i = 0; i < Array.length; i++)
+                    if(Array[i] >= 0){
+                        c++;}
+                console.log(c);    
+            }
+            countPositive(a);
+            
+            function minMax(nums){
+                    const result = {
+                        min: null,
+                        max: null
+                    };
+                for(i = 0; i < nums.length; i++){
+                    if(result.min === null || nums[i] < result.min){
+                        result.min = nums[i];}
+                    if(result.max === null || nums[i] > result.max){
+                        result.max = nums[i];}
+                    }
+                    return result;
+                }
+                console.log(minMax([]));
+                
+                function countWords(words){
+                    const result = {};
+
+                    for(i = 0; i < words.length; i++){
+                        if(!result[words[i]])
+                            result[words[i]] = 1;
+                        else
+                            result[words[i]]++;
+                    }
+                    return result;
+                }
+                console.log(countWords(['apple', 'grape', 'apple', 'apple', 'mar']));
+                 
+                let words = ['search', 'world', 'search', 'good'];
+                let index = -1;
+                for(let i = 0; i < words.length; i++){
+                    if(words[i] === 'search'){
+                        index = i;
+                        console.log(index);
+                        break;}
+                }
+                if(index === -1)
+                    console.log(index);
+                
+                
+                findIndex(['green', 'red', 'blue', 'red'],'yellow');
+                
+                function  removeEgg(foods){
+                    const foodsCopy = foods.slice();
+                    const reversedFood = foodsCopy.reverse();
+                    let newFoods = [];
+                    let index = 0;
+                    for(let i = 0; i < reversedFood.length; i++){
+                        if(reversedFood[i] === 'egg' && index < 2){
+                            index++;
+                            continue;
+                        }
+                        newFoods.push(reversedFood[i]);
+                    }
+                    console.log(newFoods.reverse());
+                    console.log(foods);
+                }
+                removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
+                
+                let i = 0;
+                for( i = 1; i <= 20; i++)
+                    if( i % 3 === 0 && i % 5 === 0){
+                        console.log('FizzBuzz');}
+                    else if( i % 5 === 0){
+                        console.log('Buzz');
+                    }
+                    else if( i % 3 === 0 ){
+                        console.log('Fizz')
+                    }
+                    else
+                        console.log(i);
+                
+                function findIndex(array,word){
+                    for(let i = 0; i < array.length; i++)
+                        if(array[i] === word){
+                            return i;
+                        }
+                    return -1;
+                }
+
+                function unique(culori){
+                    let i = 0;
+                    let result = [];
+                    for( i = 0; i < culori.length; i++){
+                        if(findIndex(result, culori[i]) === -1){
+                            result.push(culori[i]);}
+                    }
+                    return result;
+                }
+                console.log(unique(['green', 'red', 'blue', 'red']));
+                console.log(unique(['red', 'green', 'green', 'red']));
+                */
+        </script>
+    </body>
+</html>

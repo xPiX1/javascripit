@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amazon</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+
+            .cost-input {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .calculate-button{
+                background-color: green;
+                color: white;
+                border: none;
+                font-size: 15px;
+                padding: 12px 15px;
+                cursor: pointer;
+                font-family: Arial;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>Amazon Shipping Calculator</p> 
+ 
+        <p>Orders under $40 = +$10 Shipping</p>
+        
+        <p>Orders over $40 = Free Shipping</p>
+        
+        <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+            handleKeyDown(event);
+        ">
+    
+        <button onclick="
+            calculateTotal();
+        " class="calculate-button">Calculate</button>
+        <p class="js-final-price"></p>
+        <script>
+            function handleKeyDown(event){
+                if(event.key === 'Enter')
+                    calculateTotal();
+            }
+            function calculateTotal(){
+                let cost = Number(document.querySelector('.js-cost-input').value) * 100;
+                if(cost < 4000 )
+                    cost += 1000;
+                document.querySelector('.js-final-price').innerHTML = `$${cost / 100}`;
+            }
+            
+        </script>
+    </body>
+</html>

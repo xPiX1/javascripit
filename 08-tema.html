@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tema 8</title>
+    </head>
+    <body>
+        <script>
+            const product1 = {
+                name: 'iPhone',
+                price: 1200
+            };
+            const product2 = {
+                name: 'iPhone',
+                price: 1200
+            };
+            function comparePrice(product1,product2){
+                if(product1.price < product2.price)
+                    console.log(product1);
+                else 
+                    console.log(product2);
+            }
+            comparePrice(product1,product2);
+            function isSameProduct(product1,product2){
+                if(product1.name === product2.name && product1.price === product2.price)
+                    console.log('Products are the same');
+                else
+                    console.log('Products are not the same');
+            }
+            isSameProduct(product1,product2);
+
+            const text =  'Good Morning';
+            console.log(text.toLocaleLowerCase());
+
+            console.log('hello'.repeat(2));
+            console.log('test'.repeat(3));
+
+        </script>
+    </body>
+</html>

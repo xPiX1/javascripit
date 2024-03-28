@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tema 2</title>
+    </head>
+    <body>
+        <script>
+            function removeEgg(foods){
+                let eggsRemoved = 0;
+                console.log(foods.filter((value) => {
+                    if(value === 'egg' && eggsRemoved < 2){
+                        eggsRemoved++;
+                        return false;}
+                    return true;
+                }));
+            }
+            removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']);
+        </script>
+    </body>
+</html>
