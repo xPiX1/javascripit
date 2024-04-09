@@ -2,45 +2,28 @@
 <html>
     <head>
         <title>Coin Flip</title>
+        <link rel="stylesheet" href="styles/08-coin-flip.css">
     </head>
     <body>
-        <button onclick="
-            playGame('heads');   
-        ">heads</button>
 
-        <button onclick="
-            playGame('tails');
-        ">tails</button>
+        <p class="title">Coin Flip</p>
 
-        <button onclick="
-            score.wins = 0;
-            score.loses = 0;
-            localStorage.setItem('score',JSON.stringify(score));
+        <button class="move-button" onclick="
+            playGame('Heads');   
+        ">Heads</button>
+
+        <button class="move-button" onclick="
+            playGame('Tails');
+        ">Tails</button>
+
+        <p class="js-result result"></p>
+
+        <p class="js-score score"></p>
+
+        <button class="clear-score-button" onclick="
+            resetScore();
         ">Clear Score</button>
-        
-        <script>
-            let randomNumber;
-            let result;
-            const score = JSON.parse(localStorage.getItem('score')) || {
-                wins: 0,
-                loses: 0
-            };
-            function playGame(guess){
-                randomNumber = Math.random();
-                if(randomNumber <= 0.5)
-                result = 'heads';
-                else
-                result = 'tails';
-                if(guess === result)
-                    score.wins++;
-                else
-                    score.loses++;
 
-                console.log(`You picked: ${guess}, The coin landed on ${result}
-Wins: ${score.wins}, Loses: ${score.loses}`);
-
-                localStorage.setItem('score',JSON.stringify(score));
-            }
-        </script>
+        <script src="scripts/08-coin-flip.js"></script>
     </body>
 </html>
